@@ -12,6 +12,7 @@ An SSR video streaming frontend which uses doodstream.com as a backend. It is bu
 - ▶️ Video player
 - 📝 Video subtitles
 - 📥 Video download
+- ❤ Client side like/dislike videos
 
 ## Live Demo
 
@@ -75,6 +76,22 @@ npm run start
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Deployment on Cloudflare Pages
+
+1. Fork the [repository](https://github.com/viperadnan-git/doodstream-web/fork) on GitHub.
+2. Create a new project on [Cloudflare Pages](https://pages.cloudflare.com/).
+3. Connect your GitHub account with Cloudflare Pages.
+4. Select the forked repository and click on `Begin Setup`.
+5. Select `nextjs` as the build preset.
+6. Add required environment variables (`DOODSTREAM_API_KEY`).
+7. Click on `Save and Deploy` to start the deployment. This first deployment will not be fully functional as the next step is also necessary.
+8. In your Pages project, go to Settings > Functions > Compatibility Flags.
+9. Configure a nodejs_compat flag for both production and preview.
+10. Go to the Deployments tab, open the latest deployment and click on Manage Deployment > Retry Deployments.
+11. Click on `Visit Site` to open the website.
+
+More information about deploying Next.js apps on Cloudflare Pages is available [here](https://developers.cloudflare.com/pages/framework-guides/deploy-a-nextjs-site/#deploy-via-the-cloudflare-dashboard).
 
 ## Contributing
 
