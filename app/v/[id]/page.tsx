@@ -5,7 +5,6 @@ import {
     LapTimerIcon,
     RocketIcon,
     Share1Icon,
-    StopwatchIcon,
 } from "@radix-ui/react-icons";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Metadata, ResolvingMetadata } from "next";
@@ -13,12 +12,12 @@ import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { humanDuration, humanSize } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
-import CardList from "@/components/card-list";
 import CopyButton from "@/components/copy-button";
 import LikeButton from "@/components/like-button";
 import Link from "next/link";
 import MessageBox from "@/components/message-box";
 import React from "react";
+import { SITENAME } from "@/lib/constants";
 import SearchCardList from "@/components/search/search-list";
 import doodstream from "@/lib/doodstream";
 
@@ -39,11 +38,11 @@ export async function generateMetadata(
     }
 
     const file = data.result[0];
-    const title = file.title;
+    const title = `${file.title} - ${SITENAME}`
     const description = `${file.title} - Duration: ${humanDuration(
         file.length
-    )} - Views: ${file.views} views - Size: ${humanSize(file.size)} - ${
-        file.uploaded
+    )} - Views: ${file.views} views - Size: ${humanSize(file.size)} - Uploaded On ${
+        new Date(file.uploaded + ".000Z").toLocaleString()
     }`;
     const image = file.splash_img;
     const previousOgImages = (await parent).openGraph?.images || [];
