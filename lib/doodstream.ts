@@ -1,4 +1,4 @@
-import { DEFAULT_PER_PAGE, DEFAULT_REVALIDATE_INTERVAL } from "./constants";
+import { DEFAULT_PER_PAGE, DEFAULT_REVALIDATE_INTERVAL, DOODSTREAM_API_KEY, DOODSTREAM_BASE_URL } from "./constants";
 
 type DoodstreamProps = {
     baseUrl?: string;
@@ -16,16 +16,14 @@ class Doodstream {
             key: undefined,
         }
     ) {
-        if (!baseUrl) baseUrl = process.env.DOODSTREAM_BASE_URL;
-        if (!key) key = process.env.DOODSTREAM_API_KEY;
+        baseUrl = baseUrl || DOODSTREAM_BASE_URL;
+        key = key || DOODSTREAM_API_KEY;
 
         if (!baseUrl) throw new Error("Doodstream Base URL not set");
         if (!key) throw new Error("Doodstream Key not set");
 
         this.baseUrl = baseUrl;
         this.key = key;
-
-        console.log("Doodstream initialized");
     }
 
     serializeQueryParams(params: { [key: string]: string }) {
