@@ -4,15 +4,15 @@ An SSR video streaming frontend which uses doodstream.com as a backend. It is bu
 
 ## Features
 
-- 🌐 SSR (Server Side Rendering)
-- 📱 Responsive design
-- 🌙 Dark mode support
-- 🔍 Search videos by name
-- 🗂️ Folders as Channels
-- ▶️ Video player
-- 📝 Video subtitles
-- 📥 Video download
-- ❤ Client side like/dislike videos
+-   🌐 SSR (Server Side Rendering)
+-   📱 Responsive design
+-   🌙 Dark mode support
+-   🔍 Search videos by name
+-   🗂️ Folders as Channels
+-   ▶️ Video player
+-   📝 Video subtitles
+-   📥 Video download
+-   ❤ Client side like/dislike videos
 
 ## Live Demo
 
@@ -21,9 +21,10 @@ A live demo of the project is available at [https://doodstream-web.pages.dev](ht
 ## Configuration
 
 The following environment variables are required to run the project:
-- `DOODSTREAM_API_KEY`: API key for doodstream.com
-- `DOODSTREAM_API_URL`: API URL for doodstream.com (default: `https://doodapi.com`)
-- `SITENAME`: Name of the website (default: `DoodWeb`)
+
+-   `DOODSTREAM_API_KEY`: API key for doodstream.com
+-   `DOODSTREAM_API_URL`: API URL for doodstream.com (default: `https://doodapi.com`)
+-   `SITENAME`: Name of the website (default: `DoodWeb`)
 
 ## Development
 

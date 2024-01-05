@@ -1,7 +1,7 @@
 {
-    "name": "doodweb",
+    "name": "doodstream-web",
     "version": "0.1.0",
-    "private": true,
+    "private": false,
     "scripts": {
         "dev": "next dev --hostname 0.0.0.0",
         "build": "next build",
@@ -35,5 +35,26 @@
         "postcss": "^8",
         "tailwindcss": "^3.3.0",
         "typescript": "^5"
-    }
+    },
+    "license": "LGPL-3.0-or-later",
+    "homepage": "https://github.com/viperadnan-git/doodstream-web",
+    "repository": {
+        "url": "git+https://github.com/viperadnan-git/doodstream-web.git",
+        "type": "git"
+    },
+    "author": "Adnan Ahmad <viperadnan@gmail.com>",
+    "bugs": {
+        "url": "https://github.com/viperadnan-git/doodstream-web/issues"
+    },
+    "description": "An SSR video streaming frontend which uses doodstream.com as a backend. It is built using Next.js and Tailwind CSS.",
+    "main": "next.config.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "keywords": [
+        "doodstream-web",
+        "doodstream",
+        "doodstream-player",
+        "nextjs"
+    ]
 }

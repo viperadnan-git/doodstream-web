@@ -38,12 +38,12 @@ export async function generateMetadata(
     }
 
     const file = data.result[0];
-    const title = `${file.title} - ${SITENAME}`
+    const title = `${file.title} - ${SITENAME}`;
     const description = `${file.title} - Duration: ${humanDuration(
         file.length
-    )} - Views: ${file.views} views - Size: ${humanSize(file.size)} - Uploaded On ${
-        new Date(file.uploaded + ".000Z").toLocaleString()
-    }`;
+    )} - Views: ${file.views} views - Size: ${humanSize(
+        file.size
+    )} - Uploaded On ${new Date(file.uploaded + ".000Z").toLocaleString()}`;
     const image = file.splash_img;
     const previousOgImages = (await parent).openGraph?.images || [];
     const previousTwImages = (await parent).twitter?.images || [];

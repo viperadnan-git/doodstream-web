@@ -1,4 +1,9 @@
-import { DEFAULT_PER_PAGE, DEFAULT_REVALIDATE_INTERVAL, DOODSTREAM_API_KEY, DOODSTREAM_BASE_URL } from "./constants";
+import {
+    DEFAULT_PER_PAGE,
+    DEFAULT_REVALIDATE_INTERVAL,
+    DOODSTREAM_API_KEY,
+    DOODSTREAM_BASE_URL,
+} from "./constants";
 
 type DoodstreamProps = {
     baseUrl?: string;
